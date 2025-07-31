@@ -65,7 +65,7 @@ async def on_message(message):
     data = load_monitored()
     guild_id = str(message.guild.id)
     if guild_id in data and str(message.author.id) in data[guild_id]:
-        mod_log_channel = discord.utils.get(message.guild.text_channels, name="mod-log")
+        mod_log_channel = discord.utils.get(message.guild.text_channels, name="tracked-users")
         if mod_log_channel:
             embed = discord.Embed(
                 title="Monitored Message",
