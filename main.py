@@ -51,6 +51,9 @@ async def on_ready():
         type=discord.ActivityType.playing, 
         name="Moderation Assistant"
     ))
+    
+    print(f"[DEBUG] Connected as {bot.user} | Session ID: {bot.ws.session_id}")
+
 
 @bot.command()
 @commands.has_permissions(manage_messages=True)
